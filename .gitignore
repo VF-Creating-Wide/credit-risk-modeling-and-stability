@@ -216,3 +216,22 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project data and generated artifacts
+data/raw/
+data/interim/
+data/processed/
+models/
+artifacts/
+mlruns/
+*.parquet
+*.feather
+*.pkl
+*.joblib
+*.onnx
+*.db
+*.duckdb
+*.sqlite
+*.sqlite3
+.DS_Store
+Thumbs.db
