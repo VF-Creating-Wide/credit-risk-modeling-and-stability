@@ -15,7 +15,7 @@
 - [x] 项目章程、目标定义与证据边界
 - [x] 约 26GB 多表 Parquet 的文件级审计
 - [x] 基础表、时间字段和 target 审计
-- [ ] 冻结开发集、Temporal Validation、Calibration 与 Final OOT
+- [x] 冻结开发集、Temporal Validation、Calibration 与 Final OOT
 - [ ] 构建 point-in-time correct Feature Mart
 - [ ] 建立 Logistic / Scorecard、Random Forest、LightGBM 基准
 - [ ] 完成校准、解释、稳定性与误差分析
