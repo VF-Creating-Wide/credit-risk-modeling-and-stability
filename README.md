@@ -6,9 +6,11 @@
 
 ## 项目目标
 
-基于 Home Credit - Credit Risk Model Stability 公开数据，围绕 `case_id` 构建 case-level 特征，并在严格的时间切分下完成信用评分卡与机器学习模型的同口径比较、概率校准、OOT 验证、模型稳定性监控和离线策略回放。
+本项目基于 Home Credit - Credit Risk Model Stability 公开数据，以 case_id 为建模单位构建信贷风险特征，在严格的时间切分框架下，完成传统信用评分卡与机器学习模型的同口径比较，并开展概率校准、时间外验证（OOT）、模型稳定性监控及离线信贷审批策略回放。
 
-核心关键词：**信贷风控、信用评分卡、Logistic Regression、WOE/IV、机器学习、LightGBM、时间验证、OOT、模型校准、PSI、模型稳定性、模型治理**。
+核心关键词：**信贷风控、信用评分卡、Logistic Regression、WOE/IV、机器学习、LightGBM、时间验证、OOT、模型校准、PSI**。
+
+应用领域： 信贷风控、信用评分、风险建模、模型监控。
 
 ## 路线图与进度
 
