@@ -22,7 +22,7 @@
 | A | 0 | ✅ | 定义预测单位、时间锚点、target证据边界 | Markdown、GitHub | Project Charter、Target Evidence |
 | A | 1 | ✅ | 盘点Parquet文件、表组和Depth层级 | Jupyter、Python、pandas、PyArrow | `file_inventory.csv`、`table_catalog.md` |
 | A | 2 | ✅ | 检查base粒度、时间字段和target分布 | Jupyter、Python、pandas、Matplotlib | `02_base_time_target_audit.ipynb`、审计报告 |
-| A | 3 | ✅ | 冻结Train、Tuning、Calibration、Final OOT | Python、Jupyter、YAML、Git | `configs/split_v1.yaml` |
+| A | 3 | ✅ | 选定和冻结Train、Tuning、Calibration、Final OOT | Python、Jupyter、YAML、Git | `configs/split_v1.yaml` |
 | B | 4 | ✅ | 合并Depth 0静态表，形成第一版宽表 | DuckDB、SQL、Python、Parquet | `depth0_feature_mart_dev_v1.parquet`、SQL、YAML清单 |
 | B | 5 | ✅ | 聚合第一批Depth 1/2历史表 | DuckDB、SQL、Python、Parquet | 表级历史特征文件、`05_depth_history_features.ipynb` |
 | B | 6 | 🔵 下一步 | 处理 `credit_bureau_a/b`、`person`、`tax_registry_a` 及剩余Depth 2 | DuckDB、SQL、Python、Parquet | `06_complex_history_features.ipynb`、表级特征文件 |
