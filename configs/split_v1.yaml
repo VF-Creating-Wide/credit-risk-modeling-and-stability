@@ -1,0 +1,72 @@
+split_id: split_v1
+status: frozen
+
+dataset: "Home Credit - Credit Risk Model Stability 2024"
+source_table: train_base.parquet
+
+time_column: date_decision
+week_column: WEEK_NUM
+target_column: target
+split_method: chronological_by_week
+selected_candidate: B_10_week
+
+splits:
+  model_train:
+    display_name: "Model Train"
+    start_week: 0
+    end_week: 61
+    start_date: "2019-01-01"
+    end_date: "2020-03-09"
+    sample_count: 1250581
+    event_count: 41040
+    non_event_count: 1209541
+    event_rate: 0.032817
+
+  tuning_validation:
+    display_name: "Tuning Validation"
+    start_week: 62
+    end_week: 71
+    start_date: "2020-03-10"
+    end_date: "2020-05-18"
+    sample_count: 63875
+    event_count: 2298
+    non_event_count: 61577
+    event_rate: 0.035977
+
+  calibration_policy_validation:
+    display_name: "Calibration/Policy Validation"
+    start_week: 72
+    end_week: 81
+    start_date: "2020-05-19"
+    end_date: "2020-07-27"
+    sample_count: 87398
+    event_count: 2056
+    non_event_count: 85342
+    event_rate: 0.023525
+
+  final_oot:
+    display_name: "Final OOT"
+    start_week: 82
+    end_week: 91
+    start_date: "2020-07-28"
+    end_date: "2020-10-05"
+    sample_count: 124805
+    event_count: 2600
+    non_event_count: 122205
+    event_rate: 0.020832
+
+selection_reason:
+  - "Maintain chronological order without random splitting."
+  - "Keep the main week 63-70 regime change inside Tuning Validation."
+  - "Reserve weeks 72-81 for calibration and policy development."
+  - "Reserve the latest 10 labeled weeks as Final OOT."
+
+final_oot_rules:
+  locked: true
+  allowed_use: final_evaluation_only
+  forbidden_uses:
+    - model_training
+    - feature_selection
+    - hyperparameter_tuning
+    - probability_calibration
+    - threshold_selection
