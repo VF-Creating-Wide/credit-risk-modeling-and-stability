@@ -4,6 +4,15 @@
 
 > Work in progress. 本仓库以可复现、时间正确和证据边界清晰为原则，构建一个面向零售信贷场景的端到端风控建模项目。
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logoColor=white)
+![Scikit--learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
+![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black)
+![PyArrow](https://img.shields.io/badge/PyArrow-2496ED?style=flat-square&logoColor=white)
+![Apache Parquet](https://img.shields.io/badge/Apache_Parquet-00599C?style=flat-square&logoColor=white)
+
 ## 项目目标
 
 本项目基于 Home Credit - Credit Risk Model Stability 公开数据，以 case_id 为建模单位构建信贷风险特征，在严格的时间切分框架下，完成传统信用评分卡与机器学习模型的同口径比较，并开展概率校准、时间外验证（OOT）、模型稳定性监控及离线信贷审批策略回放。
