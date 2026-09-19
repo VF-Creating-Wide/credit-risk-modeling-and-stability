@@ -18,7 +18,7 @@
 - 🔒 Final OOT：Step 14，候选模型冻结后只打开一次
 
 | Phase | Step | 状态 | 核心任务 | 主要工具 | 关键产出 |
-|---|---:|---|---|---|---|
+|:---:|:---:|---|---|---|---|
 | A | 0 | ✅ | 定义预测单位、时间锚点、target证据边界 | Markdown、GitHub | Project Charter、Target Evidence |
 | A | 1 | ✅ | 盘点Parquet文件、表组和Depth层级 | Jupyter、Python、pandas、PyArrow | `file_inventory.csv`、`table_catalog.md` |
 | A | 2 | ✅ | 检查base粒度、时间字段和target分布 | Jupyter、Python、pandas、Matplotlib | `02_base_time_target_audit.ipynb`、审计报告 |
