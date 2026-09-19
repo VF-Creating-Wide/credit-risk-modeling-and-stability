@@ -10,8 +10,8 @@
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat-square&logoColor=white)
 ![Scikit--learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black)
-![PyArrow](https://img.shields.io/badge/PyArrow-2496ED?style=flat-square&logoColor=white)
-![Apache Parquet](https://img.shields.io/badge/Apache_Parquet-00599C?style=flat-square&logoColor=white)
+![PyArrow](https://img.shields.io/badge/PyArrow-2496ED?style=flat-square&logo=apachearrow&logoColor=white)
+![Apache Parquet](https://img.shields.io/badge/Apache_Parquet-00599C?style=flat-square&logo=apacheparquet&logoColor=white)
 
 ## 项目目标
 
