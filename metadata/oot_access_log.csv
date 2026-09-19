@@ -1,0 +1,2 @@
+﻿access_id,access_time,project_stage,split_id,oot_week_range,purpose,data_scope,fields_accessed,feature_data_accessed,model_predictions_accessed,model_metrics_accessed,used_for_model_selection,final_oot_model_evaluation_opened,notes
+OOT-BOUNDARY-001,2026-09-19 14:59:45,Step 3,split_v1,82-91,Define and freeze temporal split,Aggregated sample and event support only,case_id|date_decision|WEEK_NUM|target,False,False,False,False,False,"Only sample_count, event_count and event_rate were inspected for split design. Final OOT model evaluation remains sealed."
