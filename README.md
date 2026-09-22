@@ -28,27 +28,14 @@
 - ⭐ 信用评分卡：Step 8
 - 🔒 Final OOT：Step 14，候选模型冻结后只打开一次
 
-| Phase | Step | 状态 | 核心任务 | 主要工具 | 关键产出 |
-|:---:|:---:|---|---|---|---|
-| A | 0 | ✅ | 定义预测单位、时间锚点、target证据边界 | Markdown、GitHub | Project Charter、Target Evidence |
-| A | 1 | ✅ | 盘点Parquet文件、表组和Depth层级 | Jupyter、Python、pandas、PyArrow | `file_inventory.csv`、`table_catalog.md` |
-| A | 2 | ✅ | 检查base粒度、时间字段和target分布 | Jupyter、Python、pandas、Matplotlib | `02_base_time_target_audit.ipynb`、审计报告 |
-| A | 3 | ✅ | 选定和冻结Train、Tuning、Calibration、Final OOT | Python、Jupyter、YAML、Git | `configs/split_v1.yaml` |
-| B | 4 | ✅ | 合并Depth 0静态表，形成第一版宽表 | DuckDB、SQL、Python、Parquet | `depth0_feature_mart_dev_v1.parquet`、SQL、YAML清单 |
-| B | 5 | ✅ | 聚合第一批Depth 1/2历史表 | DuckDB、SQL、Python、Parquet | 表级历史特征文件、`05_depth_history_features.ipynb` |
-| B | 6 | 🔵 下一步 | 处理 `credit_bureau_a/b`、`person`、`tax_registry_a` 及剩余Depth 2 | DuckDB、SQL、Python、Parquet | `06_complex_history_features.ipynb`、表级特征文件 |
-| B | 7 | ⏳ | 合并全部特征并做最小必要的模型就绪处理 | DuckDB、SQL、pandas、YAML | 最终 Feature Mart、特征字典、训练字段清单 |
-| C | 8 | ⭐ | 分箱、WOE/IV、Logistic、分数转换和风险分层 | pandas、scikit-learn、OptBinning（可选）、Matplotlib | Scorecard模型、分箱表、WOE映射、评分公式 |
-| C | 9 | ⏳ | 训练Random Forest和LightGBM挑战模型 | scikit-learn、LightGBM | 模型文件、参数记录、验证集预测 |
-| C | 10 | ⏳ | 同一切分下比较模型并选择候选模型 | Python、AUC/KS/PR-AUC/Brier、Matplotlib | 模型比较报告、候选模型决策 |
-| D | 11 | ⏳ | 在独立区间做概率校准、风险分层和cutoff设计 | scikit-learn calibration、Python | 校准器、风险等级、策略阈值 |
-| D | 12 | ⏳ | 检查解释性、周度性能和分布漂移 | SHAP、Logistic系数、PSI、pandas | 解释图、稳定性报告、监控指标 |
-| D | 13 | ⏳ | 冻结数据、特征、模型、校准和策略版本 | Git/GitHub、YAML、joblib | 冻结commit、模型卡、版本清单 |
-| D | 14 | 🔒 | 在Week 82–91执行一次Final OOT评估 | 冻结推理脚本、Python、Matplotlib | Final OOT报告；禁止再次调参 |
-| E | 15 | ⏳ | 比较不同cutoff下的通过率和target捕获率 | Python、pandas、SQL | Offline policy replay报告 |
-| E | 16 | ⏳ | 建立稳定性监控表和管理看板 | SQL、DuckDB、Power BI、Matplotlib | PSI/AUC/KS/校准/缺失率Dashboard |
-| E | 17 | ⏳ | 整理GitHub首页、项目报告和面试讲解 | GitHub、Markdown、图表 | README、5分钟讲解、简历项目描述 |
-
+| Phase | Step | 状态 | 核心任务 | 关键产出 |
+|:---:|:---:|---|---|---|
+| A | 0 | ✅ | 定义预测单位、时间锚点、target证据边界 | Project Charter、Target Evidence |
+| A | 1 | ✅ | 盘点Parquet文件、表组和Depth层级 | `file_inventory.csv`、`table_catalog.md` |
+| A | 2 | ✅ | 检查base粒度、时间字段和target分布 | `02_base_time_target_audit.ipynb`、审计报告 |
+| A | 3 | ✅ | 选定和冻结Train、Tuning、Calibration、Final OOT | `configs/split_v1.yaml` |
+| B | 4 | ✅ | 合并Depth 0静态表，形成第一版宽表 | `depth0_feature_mart_dev_v1.parquet`、SQL、YAML清单 |
+| B | 5 | ✅ | 三基准模型 | 评分结果已出|
 ## 方法概览
 
 | 模块 | 设计 |
